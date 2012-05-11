@@ -11,6 +11,11 @@ OUT="output.#.txt"
 # Limits
 TL=1 # Time limit (in seconds)
 
+# Compiling options
+CPP="g++ -O2 -w -lm" # C++
+C="gcc -O2 -w -lm" # C
+PAS="gpc" # Pascal
+
 ## ****** END - Configuration ********
 
 #--------------------------------------------------
@@ -42,13 +47,13 @@ fi
 LANG=`echo $1 | awk -F . '{print $NF}'`
 if [ "$LANG" == "cpp" ]
 then
-	COMPILER="g++ -O2 -w -lm $1 2> .compiler_report" # C++
+	COMPILER="$CPP $1 2> .compiler_report" # C++
 elif [ "$LANG" == "c" ]
 then
-	COMPILER="gcc -O2 -w -lm $1 2> .compiler_report" # C
+	COMPILER="$C $1 2> .compiler_report" # C
 elif [ "$LANG" == "pas" ]
 then
-	COMPILER="gpc $1 2> .compiler_report" # Pascal
+	COMPILER="$PAS $1 2> .compiler_report" # Pascal
 fi
 
 # Compilation
