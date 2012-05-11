@@ -7,8 +7,8 @@ There are a couple of things you can configure manually in the script. (unfortun
 
 Those are:
 	* input/output filename format (defaults are 'input.#.txt' and	'output.#.txt')
-	* Time limit (default is 1 second)
-	* The compiler and compiling options for each language (the languages are detected based on the file extension)
+	* time limit (default is 1 second)
+	* the compiler and compiling options for each language (the language is detected based on the file extension)
 
 Note: the '#' character in the input/output filename description will be replaced by 1, 2, 3, ... for each test case. For example 'input.#.txt' means that the input files are: input.1.txt , input.2.txt , ... up to the maximum numbered test case existing in the current directory.
 
