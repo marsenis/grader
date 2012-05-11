@@ -1,0 +1,19 @@
+grader-cli version 2.2
+
+CONFIGURATION
+------------------------------
+
+There are a couple of things you can configure manually in the script. (unfortunatelly not much yet..)
+
+Those are:
+	* Input/Output filename format (defaults are 'input.#.txt' m 'output.#.txt')
+	* Time limit (default is 1 second)
+
+Note: the '#' character in the input/output filename description will be replaced by 1, 2, 3, ... for each test case. For example 'input.#.txt' means that the input files are: input.1.txt , input.2.txt , ... up to the maximum numbered test case existing in the current directory.
+
+USAGE
+------------------------------
+
+Just run the script with one parameter, the source code filename. The script, the source code and the test cases should be in same directory.
+	
+	./grader test.cpp
