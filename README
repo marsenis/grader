@@ -18,7 +18,7 @@ USAGE
 Just run the script with one parameter, the source code filename. 
 
 Example:
-	./grader test.cpp
+	./grader.sh test.cpp
 
 	The above command will first compile test.cpp and then run the executable for each test case of the form described by the user.
 	After each run (and if the program terminates with exit code 0 within the time limit), the output is judged based on the given correct output files.
