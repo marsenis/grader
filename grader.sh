@@ -41,15 +41,15 @@ PAS="gpc" # Pascal
 #IN THE SOFTWARE.
 
 # Color Codes
-red='\e[0;31m'
-RED='\e[1;31m'
-GREEN='\e[1;32m'
-green='\e[0;32m'
-blue='\e[0;34m'
-BLUE='\e[1;34m'
-cyan='\e[0;36m'
-CYAN='\e[1;36m'
-NC='\e[0m' # No Color
+red='\033[0;31m'
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+green='\033[0;32m'
+blue='\033[0;34m'
+BLUE='\033[1;34m'
+cyan='\033[0;36m'
+CYAN='\033[1;36m'
+NC='\033[0m' # No Color
 
 # Cleanup on exit
 rm -f .overview .compiler_report .time_info .$1.out
@@ -110,7 +110,7 @@ do
 	time -p (./a.out < $TEST_CASE_IN > .$1.out) 2> .time_info;
 
 	EX_CODE=$?;
-	if [ $EX_CODE -eq 137 ]
+	if [ $EX_CODE -eq 137 ] || [ $EX_CODE -eq 152 ]
 	then
 		echo -e " ${RED}X TLE: Time Limit Exceeded${NC}";
 		echo -n "T" >> .overview;
@@ -149,6 +149,6 @@ fi
 echo -n "$CORRECT / $N"
 if [ $CORRECT -eq $N ]
 then
-	echo -en "   ${GREEN}AWWW YEAH :D${NC}"
+	echo -en "   ${GREEN}All test cases passed!!${NC}"
 fi
 echo
