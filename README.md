@@ -1,4 +1,9 @@
-grader-cli version 2.2
+Purpose
+========
+
+This simplistic shell script was created as a quick and dirty way to automatically run a program against a set of inputs and evaluate the validity of the outputs. The typical use-case I had in mind was programming competitions. It's important to notice that this script does not provide any sandboxing so make sure any code you are evaluating is not malicious.
+
+*Disclaimer:* At the time of writing I admit I did not have the expertise of writing good software and especially software that works well across platforms. As a consequence there are probably many bugs in the code which I have not come across if they didn't appear on my platform. I recently tried patching some of those bugs (see CHANGELOG) that people brought to my attention but I'm sure there are many more. Feel free to contact me for bugs, suggestions and general feedback at marsenis 'at' gmail 'dot' com.
 
 Configuration
 =============
@@ -33,7 +38,7 @@ Important Notes
 License
 =======
 
-Copyright (c) 2012 Makis Arsenis marsenis@gmail.com
+Copyright (c) 2012 Makis Arsenis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
