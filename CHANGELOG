@@ -1,0 +1,4 @@
+Bug fixes [Feb. 22, 2020]:
+
+1. Fixed escape sequences for colors. It seems that \e is not supported in some systems so I replaced it with \033.
+2. Time Limit Exceeded used to be interpreted as Runtime error in some system. Temporary fix applied: Interpret both return codes 152 and 137 as "terminated by SIGXCPU" which is the signal ulimit is supposed to send when CPU time is exceeded. A more permanent/universal solution is still pending.
